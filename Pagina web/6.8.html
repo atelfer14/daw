@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="tema6.css">
+	<title>Experiencia de usuario</title>
+</head>
+<body>
+<div class="candara" class="Titulo">
+		<h1> TEMA 6: IMPLEMENTACIÓN DE LA USABILIDAD EN LA WEB </h1>
+	</div>
+
+	<nav class="Navegador">
+		<a href="6.1.html">1. USUARIOS</a> |
+		<a href="6.2.html">2. BARRERAS USUARIOS</a> |
+		<a href="6.3.html">3. ESTÁNDARES EXTERNOS</a> |
+		<a href="6.4.html">4. USABILIDAD</a> |
+		<a href="6.5.html">5. IDENTIFICACIÓN OBJETIVO WEB</a> |
+		<a href="6.6.html">6. NAVEGACIÓN RECORDADA</a> |
+		<a href="6.7.html">7. EXPERIENCIA USUARIO</a> |
+		<a href="6.8.html">8. VELOCIDAD</a> |
+		<a href="6.9.html">9. HERRAMIENTAS</a> |
+		<a href="6.10.html">10. VERIFICACIÓN USABILIDAD</a>
+	</nav>
+
+	<div class="candara" class="Contenido">
+		<header class="Subtitulo">
+			<h2>VELOCIDAD DE CONEXIÓN</h2>
+		</header>
+
+		<article class="Medio">
+			<section class="Trozo">
+				<h4> Factores determinantes de velocidad </h4>
+				<p>La velocidad de carga de una página o aplicación es un factor imprescindible para que tenga éxito. Hoy en día, por esperar 7 segundos damos la página por muerta.<br><br>
+				En la velocidad de una página pueden influir el tamaño de la misma y la cantidad de ficheros que tenga, como hojas de estilos, ficheros JavaScript, imágenes, etc.<br><br>
+				Si abrimos muchas páginas web y miramos en las herramientas de desarrollador en la pestaña network, veremos la gran cantidad de archivos que son necesarios para procesar la web.<br><br>
+				Además, a veces no solo tenemos que cargar los recursos propios, sino que también otros ficheros como el analytics, librerías JavaScript, etc.
+				</p>
+				<img class="" src="">
+			</section>
+			
+			<section class="Trozo">
+				<h4>CDN: Content Delivery Network</h4>
+				<p> Otro factor que afecta es la proximidad; no es lo mismo que el servidor esté en tu país que en el extranjero. En todos los países hay un punto neutro de internet donde todos los servidores del mundo comparten tráfico de red.<br><br>
+				Un CDN es una red de contenidos que básicamente acerca los contenidos al usuario de una forma muy obvia: manteniendo una red de servidores que esté presente en la mayor parte de los lugares del planeta posibles.<br><br>
+				Por ejemplo, si una página web contiene muchos elementos estáticos, un CDN los distribuiría así, en comparación con una distribución centralizada:
+				</p>
+				<img class="" src="elementos/cdn.png">
+				<p> Frameworks, como Angular.js o Bootstrap, se ofrecen a través de CDNs.
+				</p>
+			</section>
+
+			<section class="Trozo">
+				<h3> Rendimiento web </h3>
+				<p> Es imprescindible que una página web esté optimizada por varios motivos:<br><br>
+				- Las debilidades de rendimiento del protocolo HTTP.<br>
+				- Las interfaces web tienen muchas áreas de mejora.<br>
+				- La velocidad es una mejora en la usabilidad.<br>
+				- Es una ventaja competitiva frente a otros.
+				</p>
+				<h4 class="rosa">El protocolo HTTP</h4>
+				<p>Es el protocolo de transferencia de hipertexto que utilizan los navegadores para comunicarse con los servidores web.<br><br>
+				A nivel de transporte, es un protocolo TCP, es decir, abre una conexión al puerto del servidor y se queda abierta hasta que finalice la conexión, PERO tiene una conexión para cada fichero:<br><br>
+				- Una conexión para el HTML.<br>
+				- Una conexión para la hoja de estilo.<br>
+				- Una conexión para CADA fichero JavaScript.<br>
+				- Una conexión para cada fichero.<br>
+				- Una conexión por cualquier otra cosa.<br>
+				- Peticiones AJAX a recursos REST.<br><br>
+				Cualquier web cotidiana supera fácilmente las 100 peticiones. Los navegadores escalonan normalmente las peticiones de 8 en 8.<br><br>
+				<b>Primeras conclusiones para mejorar el rendimiento de las web:</b><br><br>
+				- Hay que reducir el número de peticiones al servidor.<br>
+				- Hay que reducir el tamaño de los ficheros.<br>
+				- Hay que unir los ficheros JavaScript y CSS en ficheros únicos entre sí.<br>
+				- Hay que integrar el contenido JavaScript y CSS dentro del propio HTML.<br><br>
+				A primera vista parece que volvemos a como normalmente aprendemos a desarrollar, haciéndolo todo junto y mezclado, algo difícilmente mantenible.<br><br>
+				Hay otros métodos de optimización que no son tan extremos como el anterior:<br><br>
+				<b>Optimización de imágenes</b><br><br>
+				- Podemos crear una imagen única que contenga todas en una, y mostrarlas con hojas de estilos.<br>
+				- Podemos optimizar su tamaño, bajando la compresión o la calidad.<br>
+				- Podemos serializar las imágenes e integrarlas dentro del HTML o del CSS.
+				</p>
+				<h4 class="rosa">Comportamiento de los navegadores</h4>
+				<p>El proceso para mostrar una página es el siguiente:<br><br>
+				- El usuario indica una url en la barra de navegación y pulsa enter.<br>
+				- El navegador trata de resolver el nombre del host a través de la IP para conectarse al servidor.<br>
+				- Cuando haya resuelto la IP, el navegador abrirá una conexión TCP/IP al puerto 80 si es http o 443 si es https.<br>
+				- Una vez abierto el puerto, le indica la petición según el protocolo HTTP, por ejemplo, “GET /”<br>
+				- El servidor responde con una serie de cabeceras y el contenido HTML.<br>
+				- El navegador recorre el HTML y cada elemento CSS, JavaScript o de imágenes.<br><br>
+				Todo esto lo hace por cada petición en cuestión de milisegundos.<br><br>
+				<b>Comportamiento mejorado</b><br><br>
+				Debido a que el protocolo HTTP no ha evolucionado a la velocidad que evolucionan el resto de actores de la web, los navegadores modernos procuran comportarse de manera eficiente para mejorar la navegación sea como sea la página que se esté visitando.<br><br>
+				<b>JavaScript</b><br><br>
+				Con los ficheros JavaScript sucede algo similar. Los navegadores bloquean las peticiones hasta que la información JavaScript esté descargada. Es decir, es un factor importante que el texto JavaScript esté al principio o al final de la página, para saber qué debe cargar primero. Normalmente irá al final.<br><br>
+				La desventaja de esto es que el script tiene que actualizarse entero cada vez que se actualice. Para solucionar esto, podemos poner nuestro fichero JavaScript en otras aplicaciones (Google Analytics, jQuery...) o programarlo de forma asíncrona (que al actualizar el valor que influya en el JavaScript, que solo actualice ese valor, como por ejemplo, un botón de like).<br><br>
+				<b>Conclusiones</b><br><br>
+				Con todo lo que he dicho, parece que la mejor solución es dejarlo todo en un mismo documento. Pero no es así.<br><br>
+				Ya que no todas las páginas funcionan igual; las hay más sencillas o más complejas; algunas usan el código JavaScript y CSS de una manera y otras de otra. Todo esto afecta a la funcionalidad de la página. Otros motivos son:<br><br>
+				- Se desperdicia la cantidad de caché del navegador.<br>
+				- Se desperdician las ventajas que pueden aportar los CDNs.<br>
+				- Se retrasa el preloading que hacen las webs.<br>
+				- No puede mostrar todo el contenido de la web de golpe, sino que tiene que esperar a las acciones del usuario, como el scroll, para cargar la página. De lo contrario, la página no estaría optimizada.<br>
+				- Usar imágenes inline también impide el uso del sistema de caché. Se pueden usar como fondos en el CSS.
+				</p>
+				<h4 class="rosa">Mejoras</h4>
+				<p>- Minimizar las peticiones.<br>
+				- Concatenar y minimizar las hojas de estilos y servirlas al principio de la página.<br>
+				- Concatenar y minimizar el JavaScript desarrollado por nosotros y servirlo al final de la página.<br>
+				- Minimizar el HTML.<br>
+				- Unir imágenes tipo icono en mapas de imágenes.<br>
+				- Reducir calidad de imágenes.<br>
+				- Hacer imágenes inline o serializadas, siempre que no superen el tamaño de 2040 bytes.<br>
+				- Utilizar módulos de comprensión en el servidor web.<br>
+				- Meter contenido CSS o JavaScript inline solamente si es muy pequeño, aproximadamente menor a 4K bytes.
+				</p>
+			</section>
+		</article>
+	</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+@font-face
+    {
+        font-family: candara;
+        src: url("candara.ttf");
+    }
+
+.candara
+    {
+        font-family: "candara";
+    }
+
+body
+    {  
+        background-size: 100%; 
+        background-color: blue;
+        background-image: url(ciudad.jpg);
+    }
+
+    .Titulo /* Forma de dar una ID con # */
+    {
+        margin-left: 10px;
+    }
+
+    .indice
+    {
+        background: #f9f9f9 none repeat scroll 0 0;
+        border: 1px solid #aaa;
+        border-radius: 20px;
+        /*font-size: 95%;*/
+        margin-bottom: 15%;
+        margin-top: 1em;
+        margin-right: 6em;
+        margin-left: 38%;
+        padding: 5px;
+        width: auto;
+        width: 20%;
+        position: fixed;
+        top: 205px;
+        right: -100px;
+    }
+          
+    .Contenido /* ID */
+    {
+        margin: 0 auto; /* Margen de 0 a auto; se adapta */
+        height: 85%; /* Altura que ocupará en el documento medido en porcentaje*/
+    }
+    
+    nav
+    {
+        padding: 10px;
+        text-align: center;
+        height: 40px; /* Altura que ocupará en el documento medido en pixeles*/
+        background-color: #FFFFFF; /* Color de fondo; en este caso rojo */
+        font-family: "candara";
+    }
+
+    .Subtitulo /* ID */
+    {
+
+        text-align: left;
+         /* Altura que ocupará en el documento medido en pixeles*/
+        background-color: #85C1E9;
+        padding: 5px;
+        padding-left: 20px;
+    }
+          
+    .Medio /* ID */
+    {
+        padding-left: 10px;
+        width: 79%;
+        float: left;
+        background-color: #FFFFFF;
+    }
+          
+    .Trozo
+    {
+        width: auto;
+        margin: 0 auto;
+        margin-left: 20px;
+        padding: 5px;
+    }
+
+    .Derecha /* ID */
+    {
+        width: 20%;
+        height: auto;
+        float: right;
+        background-color: #2471A3;
+    }
+
+    .TextoDerecha
+    {
+        margin-left: 10px;
+    }
+
+    .fotoderecha
+    {
+        margin-left: 35px;
+    }
+
+    .fotos
+    {
+        width: 75%;
+        margin: 20px;
+
+    }
+        
+
+    .foto
+    {
+        width: 50%;
+        margin: 20px;
+
+    }
+
+    .Pie /* ID */
+    {
+        text-align: center;
+        clear: both;
+        height: 25px;
+        background-color: #F5B7B1;
+    }
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover{
+        color: grey;
+    }
+
+    .rosa
+    {
+        color: #FE4FF5;
+    }
+
+    h3
+    {
+        position: inline-block;
+        text-align: center;
+        background-color: #ABABAB;
+        border-radius: 20px;
+    }
+
+    h1
+    {
+        text-align: ;
+    }
